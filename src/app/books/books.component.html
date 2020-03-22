@@ -1,0 +1,10 @@
+<h2>My Books</h2>
+<ul class="books">
+	<!--li *ngFor="let book of mockbooks"  [class.selected]="book === selectedBook" (click)="onSelect(book)"-->
+	<li *ngFor="let book of mockbooks">
+		<a routerLink="/detail/{{book.id}}">
+			<span class="book">{{book.id}} </span>{{book.name}}
+		</a>
+	</li>
+</ul>
+<!--app-book-detail [book]="selectedBook"></app-book-detail-->
